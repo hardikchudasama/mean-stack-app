@@ -1,0 +1,40 @@
+<h2 mat-dialog-title>Add Employee</h2>
+<hr>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="registrationForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" formControlName="firstName" [ngModel]='editEmployeeData?.firstName' class="form-control" id="firstname" placeholder="Enter First Name" formcon>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" formControlName="lastName" [ngModel]='editEmployeeData?.lastName' class="form-control" id="lastname" placeholder="Enter Last Name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" formControlName="email" [ngModel]='editEmployeeData?.email' class="form-control" id="email" placeholder="Enter Email">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="phone">Phone No</label>
+                        <input type="number" formControlName="phone" [ngModel]='editEmployeeData?.phone' class="form-control" id="phone" placeholder="Enter Phone No">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button type="submit" class="btn btn-secondary mr-2" mat-dialog-close>Cancel</button>
+    <button type="submit" class="btn btn-primary" (click)='onSubmit()'>{{submitButton}}</button>
+</mat-dialog-actions>

@@ -1,0 +1,10 @@
+<h2 matDialogTitle>Delete Employee?</h2>
+<hr>
+<mat-dialog-content>
+    <h3>Are you sure you want to delete this employee?</h3>
+</mat-dialog-content>
+<hr>
+<mat-dialog-actions align="end">
+    <button mat-button matDialogClose="cancel" color="primary">Cancel</button>
+    <button mat-button matDialogClose="confirm" color="warn" (click)='deleteEmployee(deleteEmployeeData.employeeId)'>Yes</button>
+</mat-dialog-actions>
